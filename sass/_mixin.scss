@@ -1,0 +1,42 @@
+@import "compass";
+@mixin pages($color){
+    background-color: $color;
+    position: relative;
+    @if $color==""{
+        height: 120vh;
+    }
+    @else{ 
+        height: 100vh;
+    }     
+}
+@mixin border($px,$soild,$color,$radius) {
+    border: $px $soild $color;
+    border-radius: $radius;
+}
+@mixin layout($display,$width,$height) {
+    display:$display;
+    width: $width;
+    height:$height; 
+}
+@mixin  triangle ($size,$color,$align){
+    height: 0;
+    width: 0;
+    @if $align == left{
+        border-right: ($size*0.86666) solid $color;
+        border-top: ($size/2) solid transparent;
+        border-bottom: ($size/2) solid transparent;}
+    @else if  $align == right{
+        border-left: ($size*0.86666) solid $color;
+        border-top: ($size/2) solid transparent;
+        border-bottom: ($size/2) solid transparent;  
+    }
+        
+}
+@mixin position ($position,$top,$right,$bottom,$left){
+    position: $position;
+    top:$top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+    

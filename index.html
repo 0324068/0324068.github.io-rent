@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.googlemap/1.5.1/jquery.googlemap.js"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5QUfNWsbekvyMvMnU-9AaVQKjlVXq_pU"></script>
+        <script src="./main.js"></script>
+        
+    </head>
+    <body>
+    <div class="left-nav-bar">            
+        <div class="nav photo"><img class="icon" src="./icon/user.png" ><p>房間照片</p></div>
+        <div class="nav location"><img class="icon" src="./icon/placeholder.png" ><p>地理位子</p></div>
+        <div class="nav rule"><img class="icon" src="./icon/push-pin.png" ><p>租屋須知</p></div>
+        <div class="nav content"><img class="icon" src="./icon/smartphone.png" ><p>連絡房東</p></div>
+    </div>
+    <div id="btn"></div>
+    <div id="body">
+        <div class="photo-filter">
+            <ul class="filter">
+                <li class="clicked" data-filter="*">全部照片</li>
+                <li data-filter=".room">房間照片</li>
+                <li data-filter=".external">外部環境</li>
+                <li data-filter=".internal">內部環境</li>
+            </ul>
+        </div>
+        <div class="banner"> 
+            <div style="clear:both"></div>
+        </div>
+        <div class="locationPage">
+            <div id="map"></div>
+        </div>
+        <div class="rulePage">
+            rule
+        </div>
+        <div class="contentPage">
+            content
+        </div>  
+    </div>
+    <div class="imgDisplay">
+        <div class="show">
+            <div class="close"></div>
+                <div class="pre"></div>
+                <div class="next"></div>
+                <img src="" alt="1">
+        </div>
+    </div>
+    <div class="control">
+        <div class="up"></div>
+        <div class="down"></div>
+    </div>
+    </body>
+</html>
