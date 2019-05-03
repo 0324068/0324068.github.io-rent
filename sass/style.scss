@@ -1,4 +1,4 @@
-/*@import "compass/reset";
+@import "compass/reset";
 @import "compass/css3";
 @import "./mixin";
 
@@ -166,7 +166,7 @@ $font-color:white;
     }
     #body{
         @include layout(none,100%,100% );
-        @include position(fixed,0,"","",65px);
+        @include position(relative,0,"","",65px);
         text-align: center;
         .photo-filter{
             @include layout(block,90% ,"" );
@@ -389,4 +389,4 @@ $font-color:white;
             @include position(absolute,45%,0,"","");
         }
     }
-}*/
+}
