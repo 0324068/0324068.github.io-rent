@@ -166,7 +166,7 @@ $font-color:white;
     }
     #body{
         @include layout(none,100%,100% );
-        @include position(relative,0,"","",65px);
+        @include position(fixed,0,"","",65px);
         text-align: center;
         .photo-filter{
             @include layout(block,90% ,"" );
