@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    window.onload = function(){
+        setTimeout(function(){
+            window.scrollTo(0, 1);
+        }, 100);
+    }
     let datas=[
         {id:1,category:'room',address:'room1'},
         {id:2,category:'room',address:'room2'},
