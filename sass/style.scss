@@ -149,8 +149,8 @@ $font-color:white;
 //i6.7.8.plus.x horizontal
 @media screen and (min-width: 667px) and (max-width: 812px)and (max-height: 414px) {
     .left-nav-bar{
-        @include layout("",65px,100vh );
-        @include position(absolute,0px,"","",0px);
+        @include layout("",65px,110vh );
+        @include position(fixed,0px,"","",0px);
         .nav{
             img.icon{
                 @include layout(block,40px,40px);
@@ -161,7 +161,7 @@ $font-color:white;
                 font-size: 13px  ;
                 margin:10px auto;
             }
-            margin-top: 20%;
+            margin-top: 30%;
         }
     }
     #body{
@@ -185,7 +185,7 @@ $font-color:white;
     .imgDisplay{
         .show{
             @include layout(flex,60vw,50vh);
-            @include position(absolute,25%,20vw,"","");
+            @include position(fixed,25%,20vw,"","");
             align-items:center;
             
             img{
@@ -306,7 +306,7 @@ $font-color:white;
     overflow: scroll;
     overflow-x: hidden;
     display: block;
-    
+    position: relative;
     .photo-filter{
         color: aliceblue;
         margin-top:10px;

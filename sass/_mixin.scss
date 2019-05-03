@@ -6,7 +6,7 @@
         height: 120vh;
     }
     @else{ 
-        height: 100vh;
+        height: 110vh;
     }     
 }
 @mixin border($px,$soild,$color,$radius) {

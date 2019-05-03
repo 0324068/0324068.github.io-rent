@@ -314,8 +314,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .left-nav-bar {
     display: "";
     width: 65px;
-    height: 100vh;
-    position: absolute;
+    height: 110vh;
+    position: fixed;
     top: 0px;
     right: "";
     bottom: "";
@@ -323,7 +323,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   /* line 154, ../sass/style.scss */
   .left-nav-bar .nav {
-    margin-top: 20%;
+    margin-top: 30%;
   }
   /* line 155, ../sass/style.scss */
   .left-nav-bar .nav img.icon {
@@ -383,7 +383,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     display: flex;
     width: 60vw;
     height: 50vh;
-    position: absolute;
+    position: fixed;
     top: 25%;
     right: 20vw;
     bottom: "";
@@ -559,6 +559,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   overflow: scroll;
   overflow-x: hidden;
   display: block;
+  position: relative;
 }
 /* line 310, ../sass/style.scss */
 #body .photo-filter {
@@ -611,19 +612,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 #body .locationPage {
   background-color: black;
   position: relative;
-  height: 100vh;
+  height: 110vh;
 }
 /* line 347, ../sass/style.scss */
 #body .rulePage {
   background-color: yellow;
   position: relative;
-  height: 100vh;
+  height: 110vh;
 }
 /* line 350, ../sass/style.scss */
 #body .contentPage {
   background-color: gray;
   position: relative;
-  height: 100vh;
+  height: 110vh;
 }
 
 /* line 355, ../sass/style.scss */

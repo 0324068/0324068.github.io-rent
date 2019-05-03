@@ -84,15 +84,18 @@ $(document).ready(function () {
         $(this).siblings('img').attr("src","./photo/"+datas[preImg].address+".JPG")
         x.preventDefault()
     });
+    $('.locationPage').click((e)=>{
+        console.log($(window).scrollTop());
+         
+    })
+    
     $(".nav").click((e)=>{
         function height(index){
             let pagename=`.${index}Page`;
-            let pagetop=(index=="photo")?0:$(pagename).position().top+$("#body").scrollTop();  
-            console.log(pagetop);
+            let pagetop=(index=="photo")?0:$(pagename).offset().top;  
+            
                                  
-            return $("#body").animate({
-                        scrollTop:pagetop
-                    },600) 
+            return $('html, body').animate({scrollTop:pagetop})
              
         }
         switch ($(e.currentTarget).prop("class")) {
