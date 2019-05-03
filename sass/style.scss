@@ -41,6 +41,7 @@ $font-color:white;
     .left-nav-bar{
         @include layout("",120px,100vh );
         @include position(fixed,0px,"","",0px);
+       
         .nav{
             img.icon{
                 @include layout(block,100px,100px);
@@ -279,7 +280,7 @@ $font-color:white;
     }
 }  
 .left-nav-bar{
-    
+    z-index: 2;
     background-color: $main-color;
     .nav{
         
@@ -299,7 +300,7 @@ $font-color:white;
 
 
 #body{
-    
+    z-index: 1;
     text-align: center;
     background-color: $main-color;
     overflow: scroll;
