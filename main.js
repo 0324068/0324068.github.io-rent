@@ -1,9 +1,5 @@
 $(document).ready(function () {
-    $(function(){
-        setTimeout(function(){
-            window.scrollTo(0, 1);
-        }, 100);
-    });
+    
     let datas=[
         {id:1,category:'room',address:'room1'},
         {id:2,category:'room',address:'room2'},
@@ -128,7 +124,7 @@ $(document).ready(function () {
             $(this).find(".icon").css({"background-color":"white"})
             $(this).find("p").css({"color":"white"})}
         )
-    $(function() {
+    /*$(function() {
         var latlng = { lat:23.556897,  lng: 120.437010 };	
         var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,	//放大的倍率
@@ -145,6 +141,6 @@ $(document).ready(function () {
         map: map ,
         title:'B棟'
     });
-      })
+      })*/
    
 })    
