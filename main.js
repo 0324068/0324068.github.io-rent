@@ -93,6 +93,7 @@ $(document).ready(function () {
         function height(index){
             let pagename=`.${index}Page`;
             let pagetop=(index=="photo")?0:$(pagename).offset().top;  
+            console.log(pagetop);
             
                                  
             return $('html, body').animate({scrollTop:pagetop})

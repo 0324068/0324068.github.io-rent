@@ -212,72 +212,60 @@ $font-color:white;
         @include layout("",100vw,100px );
         @include position(fixed,"","",0px,0px);
         .nav{
-            @include layout(inline-block,24%,140px );
-            margin-top: 10px;
+            @include layout(inline-block,24%,100px);
             img.icon{
-                @include layout(block,50px,50px);
-                margin: auto;
+                @include layout(block,60px,60px);
+                margin:auto;
             }
             p{
-                font-size: 16px  ;
-                margin-top:3px; 
+                font-size: 13px  ;
+                margin:10px auto;
             }
-            
         }
     }
     #body{
-        @include layout(none,100%,calc(100vh - 100px) );
-        @include position(absolute,0,"","","");
+        @include layout(none,100%,100%);
+        @include position(absolute,0px,"","",0px);
+        margin-bottom: 160px;
         text-align: center;
-        margin-bottom: 100px;
-        
         .photo-filter{
-            ul{
-                li{
-                    margin: 0 3px;
-                    font-size: 1.2rem
-                }
-            }
-            @include layout(block,100% ,"" );
+            @include layout(block,90% ,"" );
         }
         .banner{
-            margin-left: calc((100vw - 320px)/2);
-            align-items:center;
-            flex-direction: column;
-            width: 100vw;
-            .single-portfolio{
-                @include position(relative,0,0,0,0);
-            }
+            width: 90%;
+            margin-left: 20px;
         }
         .locationPage{
             #map{
-                @include layout("",90%,40%);
-                @include position(absolute,calc(100vh*0.4),calc(100vw*0.05),"","");
+                @include layout("",50%,70%);
+                @include position(absolute,15vh,15vw,"","");
             }   
         }
     }
     .imgDisplay{
         .show{
-            @include layout(flex,100vw,calc(100vh/2) );
-            @include position(absolute,25%,"","","");
+            @include layout(flex,60vw,50vh);
+            @include position(fixed,25%,20vw,"","");
             align-items:center;
             
             img{
-                max-width: calc(100vw*0.8);
-                max-height: calc(100vh*0.5);
+                max-width:80vw;
+                max-height:50vh;
                 margin: 0 auto;
             }
             .close{
                 @include layout("",30px,30px );
                 @include border(2px,solid,$main-color,20px);
-                @include position(absolute,0,10px,"","");
+                @include position(absolute,0,5px,"","");
                 line-height: 20px;
                 text-align: center;
                 
             
             }
+            
         }
     }
+
 }  
 .left-nav-bar{
     z-index: 2;
