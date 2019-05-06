@@ -7,21 +7,21 @@ $main-color:black;
 $color:orangered;
 $font-color:white;
 //desktop
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1200px) {
     .left-nav-bar{
         @include layout("",120px,100vh );
         @include position(fixed,0px,"","",0px);
         .nav{
             @include layout(block,100%,140px );
             img.icon{
-                @include layout(block,100px,100px);
+                @include layout(block,80px,80px);
                 @include position(relative,10px,"","","");
                 margin:0 10% 10% 5%;
             }
             p{
                 font-size: 22px  ;
             }  
-            margin-top: 30%;
+            margin-top: 10%;
         }
     }
     #body{
@@ -31,38 +31,52 @@ $font-color:white;
             @include layout(block,100% ,"" );
         }
         .banner{
-            width: 80%;
-            margin-left: 8%;  
+            width: 90%; 
+            .single-portfolio{
+                @include layout(inline-block,"","");
+            }
         }
     }
 };
 //ipad horizontal
-@media screen and (min-width: 1024px) and (max-width: 1365px){
+@media screen and (min-width: 1024px) and (max-width: 1200px){
     .left-nav-bar{
-        @include layout("",120px,100vh );
+        @include layout("",100px,110vh );
         @include position(fixed,0px,"","",0px);
-       
+        padding-top: 25px;
         .nav{
             img.icon{
-                @include layout(block,100px,100px);
+                @include layout(block,80px,80px);
                 @include position(relative,10px,"","","");
-                margin:0 10% 10% 5%;
+                margin:auto;
             }
             p{
                 font-size: 22px  ;
+                margin:20px auto;
             }
-            margin-top: 30%;
+            margin-top: 35%;
         }
     }
     #body{
         @include layout(none,100%,100% );
-        @include position(fixed,0,"","",120px);
+        @include position(absolute,0,"","",65px);
         text-align: center;
         .photo-filter{
             @include layout(block,90% ,"" );
+            margin:0 auto;
         }
         .banner{
             width: 90%;
+            margin-left: calc((100vw - 925px)/2);
+            .single-portfolio{
+                @include layout(inline-block,300px,210px);
+            } 
+        }
+        .locationPage{
+            #map{
+                @include layout("",50%,70%);
+                @include position(absolute,15vh,15vw,"","");
+            }   
         }
     }
     .imgDisplay{
@@ -91,34 +105,41 @@ $font-color:white;
 //ipad vertical
 @media screen and (min-width: 768px) and (max-width: 900px)and (min-height: 1000px) {
     .left-nav-bar{
-        @include layout("",100vw,160px );
+        @include layout("",100vw,100px );
         @include position(fixed,"","",0px,0px);
         .nav{
-            @include layout(inline-block,24%,140px );
-            margin-top: 10px;
+            @include layout(inline-block,24%,100px);
             img.icon{
-                @include layout(block,100px,100px);
-                margin: auto;
+                @include layout(block,60px,60px);
+                margin:auto;
             }
-            
+            p{
+                font-size: 13px  ;
+                margin:5px auto;
+            }
         }
     }
     #body{
-        @include layout(none,100%,calc(100vh - 160px) );
-        @include position(relative,0,"","","");
+        @include layout(none,100%,100%);
+        @include position(absolute,0px,"","",0px);
         margin-bottom: 160px;
         text-align: center;
         .photo-filter{
-            @include layout(block,100% ,"" );
+            @include layout(block,90% ,"" );
+            margin: 0 auto;
+            
         }
         .banner{
-            width: 100%;
+            width: 90%;
             margin-left: calc(50vw - 300px);
+            .single-portfolio{
+                @include layout(inline-block,300px,210px);
+            }
         }
         .locationPage{
             #map{
-                @include layout("",80%,40%);
-                @include position(absolute,40vh,10vw,"","");
+                @include layout("",50%,70%);
+                @include position(absolute,15vh,15vw,"","");
             }   
         }
     }
@@ -151,6 +172,7 @@ $font-color:white;
     .left-nav-bar{
         @include layout("",65px,110vh );
         @include position(fixed,0px,"","",0px);
+        padding-top: 15px;
         .nav{
             img.icon{
                 @include layout(block,40px,40px);
@@ -161,7 +183,7 @@ $font-color:white;
                 font-size: 13px  ;
                 margin:10px auto;
             }
-            margin-top: 30%;
+            margin-top: 20%;
         }
     }
     #body{
@@ -170,10 +192,14 @@ $font-color:white;
         text-align: center;
         .photo-filter{
             @include layout(block,90% ,"" );
+            margin:0 auto;
         }
         .banner{
-            width: 90%;
-            margin-left: 20px;
+            width: 620px;
+            margin-left: calc((100vw - 685px)/2);
+            .single-portfolio{
+                @include layout(inline-block,300px,210px);
+            } 
         }
         .locationPage{
             #map{
@@ -219,7 +245,7 @@ $font-color:white;
             }
             p{
                 font-size: 13px  ;
-                margin:10px auto;
+                margin:5px auto;
             }
         }
     }
@@ -230,10 +256,15 @@ $font-color:white;
         text-align: center;
         .photo-filter{
             @include layout(block,90% ,"" );
+            margin: 0 auto;
+            
         }
         .banner{
             width: 90%;
-            margin-left: 20px;
+            margin-left: calc(50vw - 150px);
+            .single-portfolio{
+                @include layout(inline-block,300px,210px);
+            }
         }
         .locationPage{
             #map{
@@ -286,13 +317,15 @@ $font-color:white;
     }
 }
 
-
+body{
+    overflow: scroll;
+    overflow-x: hidden;
+}
 #body{
     z-index: 1;
     text-align: center;
     background-color: $main-color;
-    overflow: scroll;
-    overflow-x: hidden;
+    overflow: inherit;
     display: block;
     position: relative;
     .photo-filter{
@@ -317,10 +350,9 @@ $font-color:white;
         
     }
     .banner{
-        @include pages(""); 
+        @include pages("");
         min-height: 824px;
         .single-portfolio{
-            @include layout(inline-block,300px,210px);
             float: left;
             text-align : center;
             margin: 3px;

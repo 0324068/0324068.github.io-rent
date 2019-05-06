@@ -42,8 +42,10 @@ $(document).ready(function () {
       }); 
         return false; 
         
-    }).first().trigger("mouseenter");;
-   
+    })
+    if(window.outerWidth<1200){
+        $("ul.filter li").first().trigger("mouseenter");
+    }
        
     $(".close").click(function(){
         $(".imgDisplay").css("display","none")
