@@ -13,11 +13,11 @@ $font-color:white;
         @include position(fixed,0px,"","",0px);
         .nav{
             @include layout(block,100%,140px );
-            margin-top: calc(25vh - 160px);
+            margin-top: calc(25vh - 150px);
             img.icon{
                 @include layout(block,80px,80px);
                 @include position(relative,10px,"","","");
-                margin:0 10% 10% 5%;
+                margin:13px auto;
             }
             p{
                 font-size: 22px  ;
@@ -29,12 +29,19 @@ $font-color:white;
         @include layout(none,100%,100% );
         @include position(fixed,0,"","",120px);
         .photo-filter{
-            @include layout(block,100% ,"" );
+            @include layout(block,90% ,"" );
         }
         .banner{
             width: 90%; 
             .single-portfolio{
                 @include layout(inline-block,"","");
+            }
+        }
+        .locationPage{
+            #map{
+                @include layout(block,500px,450px);
+                @include position(relative,20%,"","",calc(100vw - 700px));
+                z-index:2;
             }
         }
     }
@@ -95,9 +102,9 @@ $font-color:white;
         }
         .locationPage{
             #map{
-                @include layout("",50%,70%);
-                @include position(absolute,15vh,15vw,"","");
-            }   
+                @include layout(block,500px,450px);
+                @include position(absolute,20%,"","",calc(100vw - 600px));
+            }
         }
     }
     .imgDisplay{
@@ -289,8 +296,8 @@ $font-color:white;
         }
         .locationPage{
             #map{
-                @include layout("",50%,70%);
-                @include position(absolute,15vh,15vw,"","");
+                @include layout("",70%,40%);
+                @include position(absolute,40vh,15vw,"","");
             }   
         }
     }
@@ -400,20 +407,10 @@ body{
     text-align: center;
     background-color: rgba(128, 128, 128, 0.75);
     .show{
-       // @include layout("",calc(100vw/2),calc(100vh/2) );
-        //@include position(absolute,25%,"","",25%);
-        img{
-            //max-width: calc(100vw*0.5);
-           // max-height: calc(100vh*0.5); margin:auto 0;
-        }
         .close{
             @include layout("",20px,20px );
-            
-            //@include position(absolute,-22px,-22px,"","");
             line-height: 20px;
             text-align: center;
-            
-        
         }
         .close::before {
             content: "\2716";
