@@ -154,7 +154,7 @@ $(document).ready(function () {
           appId            : '318854485453171',
           autoLogAppEvents : true,
           xfbml            : true,
-          version          : 'v2.11'
+          version          : 'v3.3'
         });
       };
       (function(d, s, id){
