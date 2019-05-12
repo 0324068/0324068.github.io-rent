@@ -772,7 +772,7 @@ body {
   height: 400px;
 }
 /* line 446, ../sass/style.scss */
-#body #fb-root .fb_dialog {
+#body #fb-root .fb_dialog.fb_dialog_advanced.fb_customer_chat_bubble_animated_no_badge.fb_customer_chat_bubble_pop_in {
   top: 100px;
 }
 
