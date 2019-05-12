@@ -102,7 +102,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   /* line 28, ../sass/style.scss */
   #body {
     display: none;
-    width: 100%;
+    width: calc(100vw - 120px);
     height: 100%;
     position: fixed;
     top: 0;
@@ -240,7 +240,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   /* line 109, ../sass/style.scss */
   #body {
     display: none;
-    width: 100%;
+    width: calc(100vw - 100px);
     height: 100%;
     position: absolute;
     top: 0;
@@ -460,7 +460,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   /* line 238, ../sass/style.scss */
   #body {
     display: none;
-    width: 100%;
+    width: calc(100vw - 65px);
     height: 100%;
     position: absolute;
     top: 0;
@@ -734,7 +734,7 @@ body {
 #body .rulePage {
   background-color: black;
   position: relative;
-  height: 50vh;
+  height: 400px;
 }
 /* line 419, ../sass/style.scss */
 #body .rulePage .rule {
@@ -769,10 +769,14 @@ body {
 #body .contentPage {
   background-color: gray;
   position: relative;
-  height: 50vh;
+  height: 400px;
+}
+/* line 446, ../sass/style.scss */
+#body #fb-root .fb_dialog {
+  top: 100px;
 }
 
-/* line 447, ../sass/style.scss */
+/* line 452, ../sass/style.scss */
 .imgDisplay {
   display: none;
   width: 100%;
@@ -786,7 +790,7 @@ body {
   text-align: center;
   background-color: rgba(128, 128, 128, 0.75);
 }
-/* line 454, ../sass/style.scss */
+/* line 459, ../sass/style.scss */
 .imgDisplay .show .close {
   display: "";
   width: 20px;
@@ -794,11 +798,11 @@ body {
   line-height: 20px;
   text-align: center;
 }
-/* line 459, ../sass/style.scss */
+/* line 464, ../sass/style.scss */
 .imgDisplay .show .close::before {
   content: "\2716";
 }
-/* line 462, ../sass/style.scss */
+/* line 467, ../sass/style.scss */
 .imgDisplay .show .pre {
   display: "";
   width: 0px;
@@ -814,7 +818,7 @@ body {
   bottom: "";
   left: "";
 }
-/* line 468, ../sass/style.scss */
+/* line 473, ../sass/style.scss */
 .imgDisplay .show .next {
   display: "";
   width: 0px;

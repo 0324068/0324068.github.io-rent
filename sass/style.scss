@@ -26,7 +26,7 @@ $font-color:white;
         }
     }
     #body{
-        @include layout(none,100%,100% );
+        @include layout(none,calc(100vw - 120px),100% );
         @include position(fixed,0,"","",120px);
         .photo-filter{
             @include layout(block,90% ,"" );
@@ -107,7 +107,7 @@ $font-color:white;
         }
     }
     #body{
-        @include layout(none,100%,100% );
+        @include layout(none,calc(100vw - 100px),100% );
         @include position(absolute,0,"","",65px);
         text-align: center;
         .photo-filter{
@@ -236,7 +236,7 @@ $font-color:white;
         }
     }
     #body{
-        @include layout(none,100%,100% );
+        @include layout(none,calc(100vw - 65px),100% );
         @include position(absolute,0,"","",65px);
         text-align: center;
         .photo-filter{
@@ -415,7 +415,7 @@ body{
         @include pages($main-color,110vh);
     }
     .rulePage{
-        @include pages($main-color,50vh);
+        @include pages($main-color,400px);
         .rule{
             @include position(relative,5vh,"","","");
             margin: 0 auto;
@@ -440,7 +440,12 @@ body{
         }
     }
     .contentPage{
-        @include pages(gray,50vh);
+        @include pages(gray,400px);
+    }
+    #fb-root{
+        .fb_dialog{
+            top:100px;
+        }
     }
 }
 
