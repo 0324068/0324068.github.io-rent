@@ -1,13 +1,8 @@
 @import "compass";
-@mixin pages($color){
+@mixin pages($color,$h){
     background-color: $color;
     position: relative;
-    @if $color==""{
-        height: 120vh;
-    }
-    @else{ 
-        height: 110vh;
-    }     
+    height: $h;
 }
 @mixin border($px,$soild,$color,$radius) {
     border: $px $soild $color;

@@ -39,9 +39,30 @@ $font-color:white;
         }
         .locationPage{
             #map{
-                @include layout(block,500px,450px);
-                @include position(relative,20%,"","",calc(100vw - 700px));
+                @include layout(block,40vw,50vh);
+                @include position(relative,20%,"","",45vw);
                 z-index:2;
+            }
+        }
+        .rulePage{
+            .rule{
+                @include position(relative,5vh,"","","");
+                margin: 0 auto;
+                position: relative;
+                font-size: 22px;
+                .policy{
+                    @include border(2px,solid,orangered,10px);
+                    @include layout(inline-block,300px,300px);
+                    vertical-align: top;
+                    line-height: 50px;
+                    letter-spacing: 3px;
+                    padding: 5px;
+                    ul{
+                        text-align: left;
+                        margin-left: 70px;
+                    }
+                }
+                
             }
         }
     }
@@ -166,8 +187,8 @@ $font-color:white;
         }
         .locationPage{
             #map{
-                @include layout("",50%,70%);
-                @include position(absolute,15vh,15vw,"","");
+                @include layout("",70%,40%);
+                @include position(absolute,40vh,15vw,"","");
             }   
         }
     }
@@ -232,7 +253,7 @@ $font-color:white;
         .locationPage{
             #map{
                 @include layout("",50%,70%);
-                @include position(absolute,15vh,15vw,"","");
+                @include position(absolute,15vh,10vw,"","");
             }   
         }
     }
@@ -348,6 +369,7 @@ $font-color:white;
 body{
     overflow: scroll;
     overflow-x: hidden;
+    background-color: $main-color;
 }
 #body{
     z-index: 1;
@@ -378,7 +400,7 @@ body{
         
     }
     .banner{
-        @include pages("");
+        @include pages("","");
         min-height: 824px;
         .single-portfolio{
             float: left;
@@ -390,13 +412,35 @@ body{
         }
     }
     .locationPage{
-        @include pages($main-color);
+        @include pages($main-color,110vh);
     }
     .rulePage{
-        @include pages(yellow);
+        @include pages($main-color,50vh);
+        .rule{
+            @include position(relative,5vh,"","","");
+            margin: 0 auto;
+            position: relative;
+            font-size: 22px;
+            color: aliceblue;
+            .policy{
+                @include border(2px,solid,orangered,10px);
+                @include layout(inline-block,300px,300px);
+                vertical-align: top;
+                line-height: 50px;
+                letter-spacing: 3px;
+                padding: 5px;
+                ul{
+                    text-align: left;
+                    margin-left: 70px;
+                }
+            }
+            .public{
+                @extend .policy;
+            }
+        }
     }
     .contentPage{
-        @include pages(gray);
+        @include pages(gray,50vh);
     }
 }
 
