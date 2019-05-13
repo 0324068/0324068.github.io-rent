@@ -148,6 +148,4 @@ $(document).ready(function () {
         title:'B棟'
     });
       })
-    
-      
 })    
