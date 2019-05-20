@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Rent</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.googlemap/1.5.1/jquery.googlemap.js"></script>
-        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5QUfNWsbekvyMvMnU-9AaVQKjlVXq_pU"></script>
-        <script src="./main.js"></script>
-        
-    </head>
-    <body>    
-    <nav class="left-nav-bar">            
-        <div class="nav photo"><img class="icon" src="./icon/user.png" ><p>房間照片</p></div>
-        <div class="nav location"><img class="icon" src="./icon/placeholder.png" ><p>地理位子</p></div>
-        <div class="nav rule"><img class="icon" src="./icon/push-pin.png" ><p>租屋須知</p></div>
-        <div class="nav content"><img class="icon" src="./icon/smartphone.png" ><p>連絡房東</p></div>
+
+<head>
+    <title>Rent</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.googlemap/1.5.1/jquery.googlemap.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5QUfNWsbekvyMvMnU-9AaVQKjlVXq_pU"></script>
+    <script src="./main.js"></script>
+
+</head>
+
+<body>
+    <nav class="left-nav-bar">
+        <div class="nav photo"><img class="icon" src="./icon/user.png">
+            <p>房間照片</p>
+        </div>
+        <div class="nav location"><img class="icon" src="./icon/placeholder.png">
+            <p>地理位子</p>
+        </div>
+        <div class="nav rule"><img class="icon" src="./icon/push-pin.png">
+            <p>租屋須知</p>
+        </div>
+        <div class="nav content"><img class="icon" src="./icon/smartphone.png">
+            <p>連絡房東</p>
+        </div>
     </nav>
     <main id="body">
         <div class="photo-filter">
@@ -28,7 +38,7 @@
                 <li data-filter=".internal">內部環境</li>
             </ul>
         </div>
-        <div class="banner"> 
+        <div class="banner">
             <div style="clear:both"></div>
         </div>
         <div class="locationPage">
@@ -41,7 +51,7 @@
                     <li>7-11</li>
                     <li>近市區</li>
                 </ul>
-            </div>        
+            </div>
             <div id="map"></div>
         </div>
         <div class="rulePage">
@@ -64,9 +74,7 @@
                         <li>網路 第四台</li>
                     </ul>
                 </div>
-                <div class="fb-customerchat"
-                    page_id="2230759387005646"
-                    minimized="true">
+                <div class="fb-customerchat" page_id="2230759387005646" minimized="true">
                 </div>
             </div>
         </div>
@@ -76,34 +84,37 @@
                     手機:0934325XXX<br>
                     晚上9點過後請勿來電 <br>
                     隨時可看房<br>
-                    利用右下角 FB Message  有專人回應</span>
-            </div> 
-        </div>  
-    </div>
+                    利用右下角 FB Message 有專人回應</span>
+            </div>
+        </div>
+        </div>
+    </main>
     <div class="imgDisplay">
         <div class="show">
             <div class="close"></div>
-                <div class="pre"></div>
-                <div class="next"></div>
-                <img src="" alt="1">
+            <div class="pre"></div>
+            <div class="next"></div>
+            <img src="" alt="1">
         </div>
-    </main>
-    </body>
-    <script>
-         window.fbAsyncInit = function() {
+    </div>
+
+</body>
+<script>
+    window.fbAsyncInit = function () {
         FB.init({
-          appId            : '318854485453171',
-          autoLogAppEvents : true,
-          xfbml            : true,
-          version          : 'v3.3'
+            appId: '318854485453171',
+            autoLogAppEvents: true,
+            xfbml: true,
+            version: 'v3.3'
         });
-      };
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk')); 
-    </script>
+    };
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk')); 
+</script>
+
 </html>

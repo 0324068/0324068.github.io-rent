@@ -46,8 +46,23 @@ $(document).ready(function () {
     if(window.outerWidth<1200){
         $("ul.filter li").first().trigger("mouseenter");
     }
-       
+    var preTop;
+    function Fixed(TF){
+        var currentTop;
+        if(TF==true){
+            currentTop=$(window).scrollTop();
+            $("#body").css({"position":'fixed',"top":-currentTop});
+            preTop=currentTop;
+        }
+        else{
+            $("#body").css({"position":'relative',"top":"0"});
+            $('html, body').scrollTop(preTop);
+        }
+        
+    }
+    
     $(".close").click(function(){
+        Fixed(false);
         $(".imgDisplay").css("display","none")
     } );
     $(".single-portfolio")
@@ -59,6 +74,7 @@ $(document).ready(function () {
         )
 
     .click(function (e) {
+        Fixed(true);
         $(".imgDisplay").css("display","block");
         selected=e.currentTarget
         let target=$(this).find("img").attr("src");                        
@@ -86,10 +102,6 @@ $(document).ready(function () {
         $(this).siblings('img').attr("src","./photo/"+datas[preImg].address+".JPG")
         x.preventDefault()
     });
-    $('.locationPage').click((e)=>{
-        console.log($(window).scrollTop());
-         
-    })
     
     $(".nav").click((e)=>{
         function height(index){

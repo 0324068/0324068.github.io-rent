@@ -79,6 +79,7 @@ $font-color:white;
 //ipad horizontal
 @media screen and (min-width: 1024px) and (max-width: 1200px){
     .left-nav-bar{
+        z-index: 2;
         @include layout("",100px,110vh );
         @include position(fixed,0px,"","",0px);
         padding-top: 25px;
@@ -489,7 +490,7 @@ body{
 }
 
 .imgDisplay{
-    @include layout(none,100%,100% );
+    @include layout(none,100vw,100vh );
     @include position(fixed,0,"","","");
     z-index: 3;
     text-align: center;
