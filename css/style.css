@@ -332,7 +332,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     text-align: center;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 900px) and (min-height: 1000px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 769px) {
   /* line 155, ../sass/style.scss */
   .left-nav-bar {
     display: "";
