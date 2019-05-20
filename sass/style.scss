@@ -195,9 +195,9 @@ $font-color:white;
             }   
         }
         .rulePage{
-            @include pages($main-color,70vh);
+            @include pages($main-color,90vh);
             .rule{
-                @include position(relative,200px,"","","");
+                @include position(relative,300px,"","","");
             }
         }
     }

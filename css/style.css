@@ -418,12 +418,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #body .rulePage {
     background-color: black;
     position: relative;
-    height: 70vh;
+    height: 90vh;
   }
   /* line 199, ../sass/style.scss */
   #body .rulePage .rule {
     position: relative;
-    top: 200px;
+    top: 300px;
     right: "";
     bottom: "";
     left: "";
